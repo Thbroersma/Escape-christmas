@@ -1,3 +1,19 @@
 body {
-    background-image: url("/img/room.jpg");
+   
+    margin: 0%;
+}
+
+img {
+    width: 10%;
+}
+.flex-column {
+    width: 21.9%;
+    height: 100vh;
+    float: right;
+    background-image: url("theme.jfif");
+    color: red;
+}
+.room {
+    width: 78.1%;
+    height: 100%;
 }
