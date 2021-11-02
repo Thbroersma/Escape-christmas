@@ -1,5 +1,8 @@
 body {
-   
+    background-image: url("room.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     margin: 0%;
 }
 
@@ -7,13 +10,17 @@ img {
     width: 10%;
 }
 .flex-column {
-    width: 21.9%;
+    width: 21%;
     height: 100vh;
     float: right;
     background-image: url("theme.jfif");
-    color: red;
+    color: rgb(11, 153, 11);
+    padding-left: 1%;
+}
+.heading {
+    font-family: creepster;
 }
 .room {
-    width: 78.1%;
+    width: 78%;
     height: 100%;
 }
