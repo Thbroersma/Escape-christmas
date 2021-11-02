@@ -1,26 +1,72 @@
 body {
-    background-image: url("room.jpg");
+    background-image: url("img/room.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     margin: 0%;
 }
-
-img {
-    width: 10%;
+button.language:hover {
+    border: black solid 1px;
+    background-image: url("img/scroll.jpg");
+    background-repeat: no-repeat;
+    
 }
+button.puzzle:hover {
+    border: black solid 1px;
+    background-image: url("img/scroll.jpg");
+    background-repeat: no-repeat;
+    float: right;
+    
+}
+.door {
+    position: relative;
+    left: 400px;
+    top: 130px;
+}
+
 .flex-column {
     width: 21%;
     height: 100vh;
     float: right;
-    background-image: url("theme.jfif");
+    background-image: url("img/theme.jfif");
     color: rgb(11, 153, 11);
     padding-left: 1%;
 }
 .heading {
     font-family: creepster;
 }
-.room {
-    width: 78%;
-    height: 100%;
+img {
+    width: 10%;
 }
+.intro {
+    font-family: creepster;
+}
+.language {
+    background-color: transparent;
+    border: transparent;
+    height: 10%;
+    width: 5%;
+    left: 20%;
+}
+.no-language {
+    width: 5%;
+    height: 10%;
+    background-color: transparent;
+    border: transparent;
+}
+.puzzle {
+    background-color: transparent;
+    border: transparent;
+    height: 10%;
+    width: 5%;
+    left: 20%;
+}
+.scroll {
+    background-image: url("img/language.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 30% 70%;
+    height: 70%;
+    width: 30%;
+}
+
