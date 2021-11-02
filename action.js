@@ -1,5 +1,8 @@
-const language = document.querySelector('.language')
-const nolanguage = document.querySelector('.no-language')
+const language = document.querySelector('.language');
+const nolanguage = document.querySelector('.no-language');
+const puzzle = document.querySelector('.puzzle');
+const nopuzzle = document.querySelector('.no-puzzle');
+const box = document.querySelector('.answer-box');
 const body = document.querySelector('.dead-body');
 
 if (language) {
@@ -9,6 +12,8 @@ if (language) {
         language.classList.remove('language');
         language.classList.add('scroll');
         nolanguage.classList.add('language');
+        box.classList.remove('answer-box');
+        box.classList.add('answer');
     })
 }
 if (nolanguage) {
@@ -17,6 +22,23 @@ if (nolanguage) {
         language.classList.remove('scroll');
         language.classList.add('language');
         nolanguage.classList.remove('language');
+    })
+}
+if (puzzle) {
+    puzzle.addEventListener('click', function () {
+
+        //document.getElementById("language").style.backgroundImage = "url('img/language.png')";
+        puzzle.classList.remove('puzzle');
+        puzzle.classList.add('puzzle-code');
+        nopuzzle.classList.add('puzzle');
+    })
+}
+if (nopuzzle) {
+    nopuzzle.addEventListener('click', function () {
+
+        puzzle.classList.remove('puzzle-code');
+        puzzle.classList.add('language');
+        nopuzzle.classList.remove('language');
     })
 }/*
 if (body) {

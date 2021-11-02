@@ -1,3 +1,12 @@
+.answer-box {
+    background-color: transparent;
+    border: transparent;
+}
+.answer {
+    align-items: center;
+    background-color: white;
+    color: green;
+}
 body {
     background-image: url("img/room.jpg");
     background-repeat: no-repeat;
@@ -15,15 +24,13 @@ button.puzzle:hover {
     border: black solid 1px;
     background-image: url("img/scroll.jpg");
     background-repeat: no-repeat;
-    float: right;
-    
+    left: 200px;    
 }
 .door {
     position: relative;
     left: 400px;
     top: 130px;
 }
-
 .flex-column {
     width: 21%;
     height: 100vh;
@@ -60,6 +67,27 @@ img {
     height: 10%;
     width: 5%;
     left: 20%;
+}
+.puzzle-code {
+    background-image: url("img/puzzle.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 80% 71.5%;
+    width: 80%;
+    height: 71.5%;
+    margin-right: 15%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+.question {
+    font-family: creepster;
+    font-size: 20px;
+}
+.no-puzzle {
+    width: 5%;
+    height: 10%;
+    background-color: transparent;
+    border: transparent;
 }
 .scroll {
     background-image: url("img/language.png");
