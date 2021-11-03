@@ -8,7 +8,7 @@ const question = document.querySelector('.question');
 const body = document.querySelector('.dead-body');
 const ha = document.querySelector(".hulpafbeelding");
 const help = document.querySelector('.wrong');
-
+const minutesTime
 if (language) {
     language.addEventListener('click', function () {
 

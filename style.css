@@ -59,6 +59,13 @@ button.skelet:hover {
     left: 90%;
     top: 80%;
 }
+.countdown {
+    color: white;
+    float: right;
+    display: inline-flex;
+    margin: 2%;
+    font-size: 2em;
+}
 .door {
     position: relative;
     left: 400px;
