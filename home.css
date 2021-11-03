@@ -1,0 +1,26 @@
+.bodyclass{
+    background-image: url("https://image.freepik.com/free-vector/halloween-background-flat-design_52683-43845.jpg");
+}
+
+.text{
+    text-align: center;
+    border: 1px;
+    border-radius:1px;
+    background-color: rgb(206, 94, 2);
+    width:550px;
+    height:50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textbox{
+    text-align: center;
+    border: 1px;
+    border-radius:1px;
+    background-color: rgb(206, 94, 2);
+    margin-left: auto;
+    margin-right: auto;
+    width:auto;
+    height:auto;
+    font-size:35px;
+}
