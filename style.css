@@ -233,7 +233,10 @@ img {
     display:block;
 }
 
-<<<<<<< HEAD
+.hide{
+    display:none;
+}
+
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
     display: table-cell;
     width: 350px;
@@ -252,8 +255,3 @@ img {
   .tile7 {background-position: left bottom;}
   .tile8 {background-position: center bottom;}
   .tile9 {background: white; cursor: default;}
-=======
-.hide{
-    display:none;
-}
->>>>>>> 9b310afa5255543bbb79ccbef501855450ba935d
