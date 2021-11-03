@@ -14,12 +14,15 @@ body {
 }
 button.case:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.exit:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.head:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.language:hover {
     border: black solid 1px;
@@ -27,22 +30,25 @@ button.language:hover {
     background-repeat: no-repeat;  
 }
 button.leg:hover {
-    border: white solid 1px;  
+    border: white solid 1px;
+    border-radius: 12px;  
 }
 button.lock:hover {
     border: white solid 1px;  
+    border-radius: 12px;
 }
 button.puzzle:hover {
     border: black solid 1px;
     background-image: url("img/scroll.jpg");
     background-repeat: no-repeat;
-    left: 200px;    
 }
 button.safe:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.skelet:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 .case {
     background-color: transparent;
@@ -134,6 +140,11 @@ img {
     left: 35%;
     top: 38%;
 }
+.message {
+    font-family: creepster;
+    font-size: 30px;
+    color: red;
+}
 .no-language {
     width: 5%;
     height: 10%;
@@ -147,7 +158,7 @@ img {
     border: transparent;
     height: 4%;
     width: 3%;
-    left: 20%;
+    left: 24%;
     top: 83%;
 }
 .puzzle-code {
@@ -157,9 +168,7 @@ img {
     background-size: 80% 71.5%;
     width: 80%;
     height: 71.5%;
-    margin-right: 15%;
-    padding-top: 5%;
-    margin-bottom: 5%;
+
 }
 
 .no-puzzle {
@@ -169,7 +178,7 @@ img {
     border: transparent;
     position: absolute;
     top: 88%;
-    left: 20%;
+    left: 24%;
 }
 .safe {
     background-color: transparent;
@@ -188,6 +197,9 @@ img {
     height: 70%;
     width: 30%;
 }
+
+
+
 .skelet {
         background-color: transparent;
         border: transparent;
@@ -197,7 +209,24 @@ img {
         left: 48%;
         top: 40%;
 }
+.wrong {
+    font-family: creepster;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
 
+.hulpafbeelding{
+    position:absolute;
+    top:5%;
+    left:35%;
+    width:60%;
+}
+.show{
+    display:block;
+}
+
+<<<<<<< HEAD
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
     display: table-cell;
     width: 350px;
@@ -216,3 +245,8 @@ img {
   .tile7 {background-position: left bottom;}
   .tile8 {background-position: center bottom;}
   .tile9 {background: white; cursor: default;}
+=======
+.hide{
+    display:none;
+}
+>>>>>>> 9b310afa5255543bbb79ccbef501855450ba935d
