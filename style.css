@@ -14,12 +14,15 @@ body {
 }
 button.case:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.exit:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.head:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.language:hover {
     border: black solid 1px;
@@ -27,10 +30,12 @@ button.language:hover {
     background-repeat: no-repeat;  
 }
 button.leg:hover {
-    border: white solid 1px;  
+    border: white solid 1px;
+    border-radius: 12px;  
 }
 button.lock:hover {
     border: white solid 1px;  
+    border-radius: 12px;
 }
 button.puzzle:hover {
     border: black solid 1px;
@@ -39,9 +44,11 @@ button.puzzle:hover {
 }
 button.safe:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 button.skelet:hover {
     border: white solid 1px;
+    border-radius: 12px;
 }
 .case {
     background-color: transparent;
