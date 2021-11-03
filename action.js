@@ -6,11 +6,12 @@ const box = document.querySelector('.answer-box');
 const submit = document.querySelector('.submit-button');
 const question = document.querySelector('.question');
 const body = document.querySelector('.dead-body');
+const ha = document.querySelector(".hulpafbeelding");
+const help = document.querySelector('.wrong');
 
 if (language) {
     language.addEventListener('click', function () {
 
-        //document.getElementById("language").style.backgroundImage = "url('img/language.png')";
         language.classList.remove('language');
         language.classList.add('scroll');
         nolanguage.classList.add('language');
@@ -27,10 +28,8 @@ if (nolanguage) {
 }
 if (puzzle) {
     puzzle.addEventListener('click', function () {
-
-        //document.getElementById("language").style.backgroundImage = "url('img/language.png')";
-        puzzle.classList.remove('puzzle');
-        puzzle.classList.add('puzzle-code');
+        ha.classList.remove("hide");
+        ha.classList.add("show");
         nopuzzle.classList.add('puzzle');
         box.classList.add('answer');
         box.classList.remove('empty');
@@ -41,19 +40,33 @@ if (puzzle) {
 if (nopuzzle) {
     nopuzzle.addEventListener('click', function () {
 
-        puzzle.classList.remove('puzzle-code');
-        puzzle.classList.add('puzzle');
-        nopuzzle.classList.remove('puzzle-code');
+        ha.classList.add("hide");
+        ha.classList.remove("show");
+        nopuzzle.classList.remove('puzzle');
         box.classList.remove('answer');
         box.classList.add('empty');
         question.classList.add('empty');
         submit.classList.add('empty');
     })
-}/*
-if (body) {
-    body.addEventListener('click', function () {
-
-        language.classList.remove('scroll');
-        language.classList.add('language');
+}
+if (submit) {
+    submit.addEventListener('click', function () {
+        if (box.value.includes('halloween feest uitnodiging') || box.value.includes('Halloween feest uitnodiging')) {
+            const text = document.querySelector('.message');
+            text.classList.remove('hide');
+            text.classList.add('show');
+            language.classList.remove('scroll');
+            ha.classList.remove("show");
+            ha.classList.add('hide');
+            submit.classList.add('empty')
+            box.classList.add('empty');
+            question.classList.add('empty');
+            help.classList.add('hide');
+        
+        }
+        else {
+            
+            help.classList.remove('hide');
+        }
     })
-}*/
+}

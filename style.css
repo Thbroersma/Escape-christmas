@@ -36,7 +36,6 @@ button.puzzle:hover {
     border: black solid 1px;
     background-image: url("img/scroll.jpg");
     background-repeat: no-repeat;
-    left: 200px;    
 }
 button.safe:hover {
     border: white solid 1px;
@@ -134,6 +133,11 @@ img {
     left: 35%;
     top: 38%;
 }
+.message {
+    font-family: creepster;
+    font-size: 30px;
+    color: red;
+}
 .no-language {
     width: 5%;
     height: 10%;
@@ -147,7 +151,7 @@ img {
     border: transparent;
     height: 4%;
     width: 3%;
-    left: 20%;
+    left: 24%;
     top: 83%;
 }
 .puzzle-code {
@@ -157,9 +161,7 @@ img {
     background-size: 80% 71.5%;
     width: 80%;
     height: 71.5%;
-    margin-right: 15%;
-    padding-top: 5%;
-    margin-bottom: 5%;
+
 }
 
 .no-puzzle {
@@ -169,7 +171,7 @@ img {
     border: transparent;
     position: absolute;
     top: 88%;
-    left: 20%;
+    left: 24%;
 }
 .safe {
     background-color: transparent;
@@ -188,6 +190,9 @@ img {
     height: 70%;
     width: 30%;
 }
+
+
+
 .skelet {
         background-color: transparent;
         border: transparent;
@@ -197,4 +202,23 @@ img {
         left: 48%;
         top: 40%;
 }
+.wrong {
+    font-family: creepster;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
 
+.hulpafbeelding{
+    position:absolute;
+    top:5%;
+    left:35%;
+    width:60%;
+}
+.show{
+    display:block;
+}
+
+.hide{
+    display:none;
+}
