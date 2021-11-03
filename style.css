@@ -1,24 +1,36 @@
-.answer-box {
-    background-color: transparent;
-    border: transparent;
-}
 .answer {
-    align-items: center;
+    margin-left: 40%;
     background-color: white;
     color: green;
+    margin-right: 2%;
+    margin-bottom: 3%;
 }
 body {
-    background-image: url("img/room.jpg");
+    background-image: url("img/room2.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     margin: 0%;
 }
+button.case:hover {
+    border: white solid 1px;
+}
+button.exit:hover {
+    border: white solid 1px;
+}
+button.head:hover {
+    border: white solid 1px;
+}
 button.language:hover {
     border: black solid 1px;
     background-image: url("img/scroll.jpg");
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;  
+}
+button.leg:hover {
+    border: white solid 1px;  
+}
+button.lock:hover {
+    border: white solid 1px;  
 }
 button.puzzle:hover {
     border: black solid 1px;
@@ -26,10 +38,48 @@ button.puzzle:hover {
     background-repeat: no-repeat;
     left: 200px;    
 }
+button.safe:hover {
+    border: white solid 1px;
+}
+button.skelet:hover {
+    border: white solid 1px;
+}
+.case {
+    background-color: transparent;
+    border: transparent;
+    height: 14%;
+    width: 8%;
+    position: absolute;
+    left: 90%;
+    top: 80%;
+}
 .door {
     position: relative;
     left: 400px;
     top: 130px;
+}
+.question {
+    margin-left: 40%;
+    font-family: creepster;
+    font-size: 30px;
+    color: red;
+}
+.empty {
+    background-color: transparent;
+    border: transparent;
+    height: 10%;
+    width: 5%;
+    left: 20%;
+    color: transparent;
+}
+.exit {
+    background-color: transparent;
+    border: transparent;
+    height: 40%;
+    width: 9%;
+    position: absolute;
+    left: 26%;
+    top: 20%;
 }
 .flex-column {
     width: 21%;
@@ -42,6 +92,15 @@ button.puzzle:hover {
 .heading {
     font-family: creepster;
 }
+.head {
+    background-color: transparent;
+    border: transparent;
+    height: 10%;
+    width: 5%;
+    position: absolute;
+    left: 86%;
+    top: 60%;
+}
 img {
     width: 10%;
 }
@@ -51,9 +110,29 @@ img {
 .language {
     background-color: transparent;
     border: transparent;
+    height: 4%;
+    width: 2%;
+    position: absolute;
+    left: 63%;
+    top: 55%;
+}
+.leg {
+    background-color: transparent;
+    border: transparent;
     height: 10%;
     width: 5%;
-    left: 20%;
+    position: absolute;
+    left: 30%;
+    top: 74%;
+}
+.lock {
+    background-color: transparent;
+    border: transparent;
+    height: 10%;
+    width: 3%;
+    position: absolute;
+    left: 35%;
+    top: 38%;
 }
 .no-language {
     width: 5%;
@@ -61,12 +140,15 @@ img {
     background-color: transparent;
     border: transparent;
 }
+
 .puzzle {
     background-color: transparent;
+    position: absolute;
     border: transparent;
-    height: 10%;
-    width: 5%;
+    height: 4%;
+    width: 3%;
     left: 20%;
+    top: 83%;
 }
 .puzzle-code {
     background-image: url("img/puzzle.png");
@@ -79,15 +161,24 @@ img {
     padding-top: 5%;
     margin-bottom: 5%;
 }
-.question {
-    font-family: creepster;
-    font-size: 20px;
-}
+
 .no-puzzle {
     width: 5%;
-    height: 10%;
+    height: 8%;
     background-color: transparent;
     border: transparent;
+    position: absolute;
+    top: 88%;
+    left: 20%;
+}
+.safe {
+    background-color: transparent;
+    border: transparent;
+    height: 14%;
+    width: 7%;
+    position: absolute;
+    left: 2%;
+    top: 68%;
 }
 .scroll {
     background-image: url("img/language.png");
@@ -96,5 +187,14 @@ img {
     background-size: 30% 70%;
     height: 70%;
     width: 30%;
+}
+.skelet {
+        background-color: transparent;
+        border: transparent;
+        height: 20%;
+        width: 10%;
+        position: absolute;
+        left: 48%;
+        top: 40%;
 }
 

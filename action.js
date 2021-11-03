@@ -3,6 +3,8 @@ const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
 const nopuzzle = document.querySelector('.no-puzzle');
 const box = document.querySelector('.answer-box');
+const submit = document.querySelector('.submit-button');
+const question = document.querySelector('.question');
 const body = document.querySelector('.dead-body');
 
 if (language) {
@@ -12,8 +14,7 @@ if (language) {
         language.classList.remove('language');
         language.classList.add('scroll');
         nolanguage.classList.add('language');
-        box.classList.remove('answer-box');
-        box.classList.add('answer');
+        
     })
 }
 if (nolanguage) {
@@ -31,14 +32,22 @@ if (puzzle) {
         puzzle.classList.remove('puzzle');
         puzzle.classList.add('puzzle-code');
         nopuzzle.classList.add('puzzle');
+        box.classList.add('answer');
+        box.classList.remove('empty');
+        question.classList.remove('empty');
+        submit.classList.remove('empty');
     })
 }
 if (nopuzzle) {
     nopuzzle.addEventListener('click', function () {
 
         puzzle.classList.remove('puzzle-code');
-        puzzle.classList.add('language');
-        nopuzzle.classList.remove('language');
+        puzzle.classList.add('puzzle');
+        nopuzzle.classList.remove('puzzle-code');
+        box.classList.remove('answer');
+        box.classList.add('empty');
+        question.classList.add('empty');
+        submit.classList.add('empty');
     })
 }/*
 if (body) {
