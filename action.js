@@ -43,13 +43,10 @@ function updateCountdown() {
 for(let i = 0; i<3; i++){
   if(numberOfPuzzle == 1){
     language.addEventListener('click', function(){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
-      textbox.addEventListener('click', function(){
-        textbox.innerHTML = " ";
-    })
-  })
+      textbox.innerHTML = " ";
+        })
     exit.addEventListener('click', function(){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-decoder.png'></img>";
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
       textbox.addEventListener('click', function(){
         textbox.innerHTML = " ";
       })
