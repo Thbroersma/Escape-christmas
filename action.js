@@ -137,7 +137,11 @@ if (submit) {
             help.classList.remove('hide');
         }
     })
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> b046ec225ef06c88099f178be708bf82483bff72
 
 function swapTiles(cell1,cell2) {
     var temp = document.getElementById(cell1).className;
