@@ -8,7 +8,20 @@ const question = document.querySelector('.question');
 const body = document.querySelector('.dead-body');
 const ha = document.querySelector(".hulpafbeelding");
 const help = document.querySelector('.wrong');
-const minutesTime
+const minutesTime = 15;
+let time = minutesTime * 60;
+const countdownEl = document.querySelector('.countdown');
+
+setInterval(updateCountdown, 1000);
+function updateCountdown() {
+    const minutes = Math.floor(time/60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;   
+    countdownEl.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+    
+}
 if (language) {
     language.addEventListener('click', function () {
 
