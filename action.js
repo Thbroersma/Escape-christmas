@@ -82,8 +82,7 @@ if (submit) {
             help.classList.remove('hide');
         }
     })
-<<<<<<< HEAD
-}*/
+}
 
 function swapTiles(cell1,cell2) {
     var temp = document.getElementById(cell1).className;
@@ -140,6 +139,3 @@ function swapTiles(cell1,cell2) {
     
   }
   
-=======
-}
->>>>>>> 9b310afa5255543bbb79ccbef501855450ba935d

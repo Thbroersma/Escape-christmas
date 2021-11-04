@@ -158,7 +158,9 @@ img {
     background-color: transparent;
     border: transparent;
 }
-
+.puzzle1 {
+    text-align: center;
+}
 .puzzle {
     background-color: transparent;
     position: absolute;
