@@ -1,3 +1,4 @@
+let numberOfPuzzle = 1;
 const language = document.querySelector('.language');
 const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
@@ -8,9 +9,21 @@ const question = document.querySelector('.question');
 const body = document.querySelector('.dead-body');
 const ha = document.querySelector(".hulpafbeelding");
 const help = document.querySelector('.wrong');
+const puzzleOne = document.querySelector('.puzzel1');
+const boneOne = document.querySelector('.leg');
+const boneTwo = document.querySelector('.head');
+const skeleton = document.querySelector('.skelet');
+const exit = document.querySelector('.exit');
+const codeCase = document.querySelector('.case');
+const lock = document.querySelector('.lock');
+const safe = document.querySelector('.safe');
+const textbox = document.querySelector('.textbox-area');
 const minutesTime = 15;
 let time = minutesTime * 60;
 const countdownEl = document.querySelector('.countdown');
+let boneOneCollect = false;
+let boneTwoCollect = false;
+let bonesCollected = 0;
 
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
@@ -20,9 +33,51 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
-    
 }
-if (language) {
+    
+for(let i = 0; i<3; i++){
+  if(numberOfPuzzle == 1){
+    boneOne.addEventListener('click', function(){
+      if(bonesCollected == 1){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
+        bonesCollected++;
+        console.log(bonesCollected);
+      }else{
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
+        bonesCollected++;
+      }
+      
+      boneOneCollect = true;
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    boneTwo.addEventListener('click', function(){
+      if(bonesCollected == 1){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
+        bonesCollected++;
+      }else{
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
+        bonesCollected++;
+      }
+      boneTwoCollect = true;
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    skeleton.addEventListener('click', function(){
+      if(bonesCollected <2){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-geenbot.png'></img>";
+        textbox.addEventListener('click', function(){
+          textbox.innerHTML = " ";
+        })
+        console.log(bonesCollected);
+      }
+    })
+    numberOfPuzzle++;
+  }
+}
+/*if (language) {
     language.addEventListener('click', function () {
 
         language.classList.remove('language');
@@ -82,7 +137,6 @@ if (submit) {
             help.classList.remove('hide');
         }
     })
-<<<<<<< HEAD
 }*/
 
 function swapTiles(cell1,cell2) {
@@ -140,6 +194,3 @@ function swapTiles(cell1,cell2) {
     
   }
   
-=======
-}
->>>>>>> 9b310afa5255543bbb79ccbef501855450ba935d
