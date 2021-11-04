@@ -50,6 +50,12 @@ button.skelet:hover {
     border: white solid 1px;
     border-radius: 12px;
 }
+button.startIntro:hover {
+    border: white solid 1px;
+    border-radius: 12px;
+    color: green;
+    font-family: creepster;
+}
 .case {
     background-color: transparent;
     border: transparent;
@@ -166,7 +172,7 @@ img {
     position: absolute;
     border: transparent;
     height: 4%;
-    width: 3%;
+    width: 2%;
     left: 24%;
     top: 83%;
 }
@@ -177,9 +183,7 @@ img {
     background-size: 80% 71.5%;
     width: 80%;
     height: 71.5%;
-
 }
-
 .no-puzzle {
     width: 5%;
     height: 8%;
@@ -223,6 +227,17 @@ img {
     height:160px;
     margin-left: 25%;
     margin-top:20%;
+}
+.startIntro {
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    background-color: transparent;
+    border: transparent;
+    color: transparent;
+    
 }
 .wrong {
     font-family: creepster;
