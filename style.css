@@ -108,6 +108,13 @@ button.startIntro:hover {
     color: rgb(11, 153, 11);
     padding-left: 1%;
 }
+.gameover {
+    color: green;
+    font-family: creepster;
+    font-size: 4vw;
+    left: 40%;
+    top: 20%;
+}
 .heading {
     font-family: creepster;
 }
