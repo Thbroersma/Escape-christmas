@@ -18,7 +18,7 @@ const codeCase = document.querySelector('.case');
 const lock = document.querySelector('.lock');
 const safe = document.querySelector('.safe');
 const textbox = document.querySelector('.textbox-area');
-const endPuzzleOne = document.querySelector('.eindePuzzel1');
+const endPuzzleOne = document.querySelector('.eindePuzzelEen');
 const inputButtonOne = document.querySelector('.inputButtonOne');
 const inputCodeOne = document.querySelector('.inputCodeOne');
 const strangeCode = document.querySelector('.strangeCode');
@@ -29,7 +29,6 @@ let boneOneCollect = false;
 let boneTwoCollect = false;
 let bonesCollected = 0;
 let keyReceived = false;
-
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
     const minutes = Math.floor(time/60);
@@ -106,11 +105,11 @@ for(let i = 0; i<3; i++){
       } else {
         shuffle();
         puzzleOne.classList.toggle('hide');
-        
       }
     })
     endPuzzleOne.addEventListener('click', function(){
-      numberOfPuzzle++;
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
+      numberOfPuzzle = 2;
       puzzleOne.classList.toggle('hide');
     })
   }else if(numberOfPuzzle == 2){
@@ -139,11 +138,11 @@ for(let i = 0; i<3; i++){
           textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-codeslot.png'></img>";
           textbox.addEventListener('click', function(){
             textbox.innerHTML = " ";
-            inputButtonOne.classList.toggle('hide');
-            inputCodeOne.classList.toggle('hide');
+            inputButtonOne.classList.remove('hide');
+            inputCodeOne.classList.remove('hide');
             inputButtonOne.addEventListener('click', function(){
               const codeAnswer = inputCodeOne.value;
-              if(codeAnswer == 2731){
+              if(codeAnswer == 2137){
                 textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
                 textbox.addEventListener('click', function(){
                   textbox.innerHTML = " ";
@@ -168,8 +167,13 @@ for(let i = 0; i<3; i++){
           strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
           strangeCode.addEventListener('click', function(){
             strangeCode.innerHTML = " ";
-          })
           
+          })
+          language.addEventListener('click', function(){
+            textbox.innerHTML = "<img class='puzzle-code' src='img/textfoto/decoding.png'>";
+            strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
+
+          })
         })
       } else {
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-geensleutel-kluis\.png'></img>";
@@ -180,57 +184,6 @@ for(let i = 0; i<3; i++){
       }
     })
   }
-}
-if (language) {
-    language.addEventListener('click', function () {
-
-        language.classList.remove('language');
-        language.classList.add('scroll');
-        nolanguage.classList.add('language');
-        
-    })
-}
-if (nolanguage) {
-    nolanguage.addEventListener('click', function () {
-
-        language.classList.remove('scroll');
-        language.classList.add('language');
-        nolanguage.classList.remove('language');
-    })
-}
-
-if (nopuzzle) {
-    nopuzzle.addEventListener('click', function () {
-
-        ha.classList.add("hide");
-        ha.classList.remove("show");
-        nopuzzle.classList.remove('puzzle');
-        box.classList.remove('answer');
-        box.classList.add('empty');
-        question.classList.add('empty');
-        submit.classList.add('empty');
-    })
-}
-if (submit) {
-    submit.addEventListener('click', function () {
-        if (box.value.includes('halloween feest uitnodiging') || box.value.includes('Halloween feest uitnodiging')) {
-            const text = document.querySelector('.message');
-            text.classList.remove('hide');
-            text.classList.add('show');
-            language.classList.remove('scroll');
-            ha.classList.remove("show");
-            ha.classList.add('hide');
-            submit.classList.add('empty')
-            box.classList.add('empty');
-            question.classList.add('empty');
-            help.classList.add('hide');
-        
-        }
-        else {
-            
-            help.classList.remove('hide');
-        }
-    })
 }
 
 function swapTiles(cell1,cell2) {
