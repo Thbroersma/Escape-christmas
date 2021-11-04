@@ -38,11 +38,11 @@ function updateCountdown() {
 for(let i = 0; i<3; i++){
   if(numberOfPuzzle == 1){
     boneOne.addEventListener('click', function(){
-      if(bonesCollected == 1){
+      if (bonesCollected == 1){
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
         bonesCollected++;
         console.log(bonesCollected);
-      }else{
+      } else{
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
         bonesCollected++;
       }
@@ -53,10 +53,10 @@ for(let i = 0; i<3; i++){
       })
     })
     boneTwo.addEventListener('click', function(){
-      if(bonesCollected == 1){
+      if (bonesCollected == 1){
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
         bonesCollected++;
-      }else{
+      } else{
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
         bonesCollected++;
       }
@@ -77,7 +77,7 @@ for(let i = 0; i<3; i++){
     numberOfPuzzle++;
   }
 }
-/*if (language) {
+if (language) {
     language.addEventListener('click', function () {
 
         language.classList.remove('language');
@@ -130,18 +130,18 @@ if (submit) {
             box.classList.add('empty');
             question.classList.add('empty');
             help.classList.add('hide');
-        
+
+
+            text.addEventListener('click', function () {
+              text.innerHTML = " ";
+            }) 
         }
         else {
             
             help.classList.remove('hide');
         }
     })
-<<<<<<< HEAD
-}*/
-=======
 }
->>>>>>> b046ec225ef06c88099f178be708bf82483bff72
 
 function swapTiles(cell1,cell2) {
     var temp = document.getElementById(cell1).className;
