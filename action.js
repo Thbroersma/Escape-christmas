@@ -159,6 +159,8 @@ if(numberOfPuzzle == 1){
             const codeAnswer = inputCodeOne.value;
             if(codeAnswer == 2137){
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
+              inputCodeOne.classList.add('hide');
+              inputButtonOne.classList.add('hide');
               textbox.addEventListener('click', function(){
                 textbox.innerHTML = " ";
                 inputButtonOne.classList.add('hide');
@@ -189,9 +191,10 @@ if(numberOfPuzzle == 1){
           const actualTranslation = "halloween feest uitnodiging";
           const personTranslation = box.value;
           if(personTranslation.toLowerCase() == actualTranslation){
-            box.classList.toggle('hide');
-            submitTranslation.classList.toggle('hide');
-            strangeCode.innerHTML = " ";
+            box.classList.add('hide');
+            submitTranslation.innerHTML = " ";
+            strangeCode.classList.add('hide');
+            
             textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
             numberOfPuzzle = 3;
           }else {
