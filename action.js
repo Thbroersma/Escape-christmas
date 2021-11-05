@@ -181,7 +181,16 @@ for(let i = 0; i<3; i++){
           box.classList.toggle('hide');
           submitTranslation.classList.toggle('hide');
           submitTranslation.addEventListener('click', function(){
-            const actualTranslation = ""
+            const actualTranslation = "halloween feest uitnodiging";
+            const personTranslation = box.value;
+            if(personTranslation.toLowerCase() == actualTranslation){
+              box.classList.toggle('hide');
+              submitTranslation.classList.toggle('hide');
+              strangeCode.innerHTML = " ";
+              textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
+            }else {
+              alert("De tekst is onjuist!");
+            }
           })
 
           strangeCode.addEventListener('click', function(){
