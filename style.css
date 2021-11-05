@@ -193,9 +193,11 @@ img {
     background-image: url("img/puzzle.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 80% 71.5%;
-    width: 80%;
-    height: 71.5%;
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    left: 5%;
+    bottom: 30%;
 }
 .no-puzzle {
     width: 5%;

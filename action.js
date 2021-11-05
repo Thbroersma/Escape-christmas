@@ -30,6 +30,14 @@ let boneOneCollect = false;
 let boneTwoCollect = false;
 let bonesCollected = 0;
 let keyReceived = false;
+const minutesTime = 0.1;
+const gameover = document.querySelector('.gameover');
+if (seconds<1) {
+  gameover.classList.remove('hide');
+  countdownEl.classList.add('hide');
+
+}
+
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
     const minutes = Math.floor(time/60);
@@ -170,6 +178,10 @@ for(let i = 0; i<3; i++){
             strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
           strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png'>";
           box.classList.toggle('hide');
+          submitTranslation.classList.toggle('hide');
+          submitTranslation.addEventListener('click', function(){
+            const actualTranslation = ""
+          })
 
           strangeCode.addEventListener('click', function(){
             strangeCode.innerHTML = " ";
