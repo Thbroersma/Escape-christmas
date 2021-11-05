@@ -22,13 +22,14 @@ const endPuzzleOne = document.querySelector('.eindePuzzelEen');
 const inputButtonOne = document.querySelector('.inputButtonOne');
 const inputCodeOne = document.querySelector('.inputCodeOne');
 const strangeCode = document.querySelector('.strangeCode');
-const minutesTime = 15;
+const minutesTime = 0.1;
 let time = minutesTime * 60;
 const countdownEl = document.querySelector('.countdown');
 let boneOneCollect = false;
 let boneTwoCollect = false;
 let bonesCollected = 0;
 let keyReceived = false;
+const gameover = document.querySelector('.gameover');
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
     const minutes = Math.floor(time/60);
@@ -37,6 +38,12 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
+
+    if (seconds<1) {
+        gameover.classList.remove('hide');
+        countdownEl.classList.add('hide');
+      
+    }
 }
     
 for(let i = 0; i<3; i++){
