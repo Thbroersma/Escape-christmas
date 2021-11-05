@@ -22,6 +22,7 @@ const endPuzzleOne = document.querySelector('.eindePuzzelEen');
 const inputButtonOne = document.querySelector('.inputButtonOne');
 const inputCodeOne = document.querySelector('.inputCodeOne');
 const strangeCode = document.querySelector('.strangeCode');
+const submitTranslation = document.querySelector('.submit-translation');
 const minutesTime = 15;
 let time = minutesTime * 60;
 const countdownEl = document.querySelector('.countdown');
@@ -163,16 +164,18 @@ for(let i = 0; i<3; i++){
       if(keyReceived == true){
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-openkluis\.png'></img>";
         textbox.addEventListener('click', function(){
-          textbox.innerHTML = " ";
-          strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
+          textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel2-decoding.png'></img>";
+          textbox.addEventListener('click', function(){
+            textbox.innerHTML = " ";
+            strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
+          strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png'>";
+          box.classList.toggle('hide');
+
           strangeCode.addEventListener('click', function(){
             strangeCode.innerHTML = " ";
+
           
           })
-          language.addEventListener('click', function(){
-            textbox.innerHTML = "<img class='puzzle-code' src='img/textfoto/decoding.png'>";
-            strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
-
           })
         })
       } else {
