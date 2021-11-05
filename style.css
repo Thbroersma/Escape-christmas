@@ -194,10 +194,10 @@ img {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: absolute;
-    width: 60%;
-    height: 50%;
+    width: 50%;
+    height: 40%;
     left: 5%;
-    bottom: 30%;
+    bottom: 40%;
 }
 .no-puzzle {
     width: 5%;
