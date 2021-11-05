@@ -252,11 +252,11 @@ img {
 }
 
 .showingtextimage{
-    width:65%;
-    height:50%;
+    width:40%;
+    height:20%;
     position: absolute;
-    left: 20%;
-    top: 30%;
+    left: 40%;
+    top: 50%;
 }
 .startIntro {
     width: 5%;
@@ -329,6 +329,20 @@ img {
 .inputCodeOne {
     top: 60%;
     left: 40%;
+    width: 12%;
+    height: 6%;
+}
+.inputCodeThree {
+    position: absolute;
+    top: 210%;
+    left: 12%;
+    width: 12%;
+    height: 6%;
+}
+.inputButtonThree {
+    position: absolute;
+    top: 218%;
+    left: 12%;
     width: 12%;
     height: 6%;
 }

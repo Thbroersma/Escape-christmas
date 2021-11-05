@@ -1,4 +1,5 @@
-let numberOfPuzzle = 1;
+let numberOfPuzzle;
+let puzzle1 = false;
 const language = document.querySelector('.language');
 const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
@@ -35,7 +36,7 @@ let bonesCollected = 0;
 let keyReceived = false;
 let doorOpen = false;
 const gameover = document.querySelector('.gameover');
-
+numberOfPuzzle = 1;
 
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
@@ -85,7 +86,7 @@ if(numberOfPuzzle == 1){
     })
   })
   boneOne.addEventListener('click', function(){
-    if(bonesCollected == 1 && boneOneCollect == false){
+    if (bonesCollected == 1 && boneOneCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
       bonesCollected++;
 
@@ -100,10 +101,10 @@ if(numberOfPuzzle == 1){
     })
   })
   boneTwo.addEventListener('click', function(){
-    if(bonesCollected == 1 && boneTwoCollect == false){
+    if (bonesCollected == 1 && boneTwoCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
       bonesCollected++;
-    }else if(boneTwoCollect == false){
+    } else if(boneTwoCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
       bonesCollected++;
     }
@@ -126,9 +127,13 @@ if(numberOfPuzzle == 1){
   endPuzzleOne.addEventListener('click', function(){
     textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
     numberOfPuzzle = 2;
+    puzzle1 = true;
+    console.log(numberOfPuzzle);
     puzzleOne.classList.toggle('hide');
   })
-}else if(numberOfPuzzle == 2){
+} 
+if (numberOfPuzzle == 2){
+  console.log('We zijn bij puzzle 2');
   boneOne.addEventListener('click', function(){
     textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
     textbox.addEventListener('click', function(){
@@ -224,7 +229,7 @@ if(numberOfPuzzle == 1){
     textbox.addEventListener('click', function(){
       textbox.innerHTML = " ";
       strangeCode.innerHTML = "<img class='codeslot' src='img/codeslot-plus-raadsel.png'></img>";
-      const lastCodeAnswer = 74658
+      const lastCodeAnswer = 74658;
       inputCodeThree.classList.toggle('hide');
       inputButtonThree.classList.toggle('hide');
       inputButtonThree.addEventListener('click', function(){
@@ -248,7 +253,7 @@ if(numberOfPuzzle == 1){
 
           exit.addEventListener('click', function(){
             body.classList.toggle('body-end');
-            showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>"
+            showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png' style='position:absolute; left:30%; top:70%; width:80%; height:60%'></img>"
             showScroll.addEventListener('click', function(){
               showScroll.innerHTML = " ";
             })
