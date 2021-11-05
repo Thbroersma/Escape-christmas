@@ -1,4 +1,4 @@
-let numberOfPuzzle = 2;
+let numberOfPuzzle = 1;
 const language = document.querySelector('.language');
 const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
@@ -52,6 +52,7 @@ function updateCountdown() {
 }
 
 if(numberOfPuzzle == 1){
+  console.log(numberOfPuzzle);
   /*showScroll.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
   showScroll.addEventListener('click', function(){
     showScroll.innerHTML = " ";
