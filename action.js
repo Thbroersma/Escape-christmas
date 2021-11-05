@@ -30,13 +30,8 @@ let boneOneCollect = false;
 let boneTwoCollect = false;
 let bonesCollected = 0;
 let keyReceived = false;
-const minutesTime = 0.1;
 const gameover = document.querySelector('.gameover');
-if (seconds<1) {
-  gameover.classList.remove('hide');
-  countdownEl.classList.add('hide');
 
-}
 
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
@@ -46,7 +41,13 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
+    /*if (seconds<1) {
+      gameover.classList.remove('hide');
+      countdownEl.classList.add('hide');
+    }   */
 }
+
+
     
 for(let i = 0; i<3; i++){
   if(numberOfPuzzle == 1){
