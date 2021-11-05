@@ -12,6 +12,13 @@ body {
     background-size: 100% 100%;
     margin: 0%;
 }
+.body-end {
+    background-image: url("img/einde\ happy\ halloween.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0%;
+}
 .buttonstyling{
     background-color:orange;
     border: black solid 2px;
@@ -297,3 +304,12 @@ img {
   .position-absolute{
       position:absolute;
   }
+.codeslot{
+    height: 600px;
+    width: 750px;
+}
+
+.showScroll{
+    height:800px;
+    width: 900px;
+}
