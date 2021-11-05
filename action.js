@@ -184,7 +184,7 @@ if(numberOfPuzzle == 1){
         textbox.addEventListener('click', function(){
           textbox.innerHTML = " ";
           strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
-        strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png' style='position:absolute; left:70%; width:15%'>";
+        strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png' style='position:absolute; left:70%; width:15%; top:20%;'>";
         box.classList.toggle('hide');
         submitTranslation.classList.toggle('hide');
         submitTranslation.addEventListener('click', function(){
