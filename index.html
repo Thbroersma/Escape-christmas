@@ -19,21 +19,26 @@
         })
       }
     -->
-    <p class="showScroll"> </p>
-    <button class="language" id="language"> </button>
+    <p class="showScroll"></p>
+    <button class="language" id="language"></button>
 
     <button class="language" id="language"></button>
     <button class="no-language"></button>
     <p class="strangeCode"></p>
     <br />
     ><br />
-    <input type=text class="answer-box showingtextimage hide position-absolute">
+    <input
+      type="text"
+      class="answer-box showingtextimage hide position-absolute"
+    />
     <input
       type="submit"
       class="submit-button empty"
       value="Check je antwoord"
     />
-    <button class="submit-translation hide position-absolute">Ik weet wat er staat!</button>
+    <button class="submit-translation hide position-absolute">
+      Ik weet wat er staat!
+    </button>
     <p class="message hide">
       Oh, dus dit is een Halloween feest? Dat verklaart een hoop. Maar ik wil
       hier weg! Ik word gek van dat gebons!
@@ -48,8 +53,8 @@
     <button class="safe"></button>
     <p class="textbox-area"></p>
     <img src="img/puzzle.png" alt="" class="hulpafbeelding hide" />
-    <center class="puzzel1 hide">
-      <div id="table" style="display: table">
+    <div class="puzzel1 hide">
+      <div id="table" class="skeletpuzzel" style="display: table">
         <div id="row1" style="display: table-row">
           <div id="cell11" class="tile1" onClick="clickTile(1,1);"></div>
           <div id="cell12" class="tile2" onClick="clickTile(1,2);"></div>
@@ -67,11 +72,13 @@
         </div>
       </div>
       <button class="eindePuzzelEen">Ik weet de code!</button>
-    </center>
+    </div>
     <input type="text" class="inputCodeOne showingtextimage hide" />
     <button class="buttonstyling hide inputButtonOne">Ik weet de code!</button>
-    <input type=text class="inputCodeThree hide">
-    <button class="buttonstyling hide inputButtonThree">Ik weet de code!</button>
+    <input type="text" class="inputCodeThree hide" />
+    <button class="buttonstyling hide inputButtonThree">
+      Ik weet de code!
+    </button>
     <audio src="audio/intro.mp3" class="startGame" autoplay="autoplay"></audio>
     <audio
       src="audio/pennywise.mp3"
