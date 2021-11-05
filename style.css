@@ -5,6 +5,7 @@
     margin-right: 2%;
     margin-bottom: 3%;
 }
+
 body {
     background-image: url("img/room2.jpeg");
     background-repeat: no-repeat;
@@ -148,6 +149,7 @@ img {
     left: 45%;
     bottom: 30%;
 }
+
 .intro {
     font-family: creepster;
 }
@@ -318,4 +320,14 @@ img {
 .showScroll{
     height:800px;
     width: 900px;
+}
+.inputCodeOne {
+    top: 55%;
+    width: 30%;
+    height: 10%;
+}
+.answer-box {
+    top: 55%;
+    width: 30%;
+    height: 10%;
 }

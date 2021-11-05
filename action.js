@@ -53,7 +53,7 @@ function updateCountdown() {
 
 if(numberOfPuzzle == 1){
   /*showScroll.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
-  showScroll.addEventListener('click', fun  ction(){
+  showScroll.addEventListener('click', function(){
     showScroll.innerHTML = " ";
   })*/
   language.addEventListener('click', function(){
