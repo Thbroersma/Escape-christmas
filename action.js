@@ -159,6 +159,8 @@ if(numberOfPuzzle == 1){
             const codeAnswer = inputCodeOne.value;
             if(codeAnswer == 2137){
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
+              inputCodeOne.classList.add('hide');
+              inputButtonOne.classList.add('hide');
               textbox.addEventListener('click', function(){
                 textbox.innerHTML = " ";
                 inputButtonOne.classList.add('hide');
