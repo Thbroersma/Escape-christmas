@@ -143,6 +143,11 @@ button.startIntro:hover {
 img {
     width: 10%;
 }
+.inputButtonOne {
+    position: absolute;
+    left: 45%;
+    bottom: 30%;
+}
 .intro {
     font-family: creepster;
 }
