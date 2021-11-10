@@ -9,7 +9,7 @@ function play(){
     
     const audio = document.querySelector(".startGame");
     const music = document.querySelector('.music');
-    audio.play();
+    //audio.play();
     music.play();
     show.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png' style='width: 70%; height: 50%;'></img> ";
     show.addEventListener('click', function(){

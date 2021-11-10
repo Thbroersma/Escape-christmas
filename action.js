@@ -1,5 +1,4 @@
-let numberOfPuzzle;
-let puzzle1 = false;
+let numberOfPuzzle = 1;
 const language = document.querySelector('.language');
 const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
@@ -36,28 +35,21 @@ let bonesCollected = 0;
 let keyReceived = false;
 let doorOpen = false;
 const gameover = document.querySelector('.gameover');
-numberOfPuzzle = 1;
 
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
     const minutes = Math.floor(time/60);
     let seconds = time % 60;
-
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
-    time--;
-    /*if (seconds<1) {
+    if (time==0) {
       gameover.classList.remove('hide');
       countdownEl.classList.add('hide');
-    }   */
+    }   
+    time--;
 }
-
-if(numberOfPuzzle == 1){
+if (numberOfPuzzle == 1){
   console.log(numberOfPuzzle);
-  /*showScroll.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
-  showScroll.addEventListener('click', function(){
-    showScroll.innerHTML = " ";
-  })*/
   language.addEventListener('click', function(){
     textbox.innerHTML = " ";
       })
@@ -90,7 +82,7 @@ if(numberOfPuzzle == 1){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
       bonesCollected++;
 
-    }else if(boneOneCollect == false){
+    } else if (boneOneCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
       bonesCollected++;
     }
@@ -104,7 +96,7 @@ if(numberOfPuzzle == 1){
     if (bonesCollected == 1 && boneTwoCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
       bonesCollected++;
-    } else if(boneTwoCollect == false){
+    } else if (boneTwoCollect == false){
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
       bonesCollected++;
     }
@@ -127,12 +119,10 @@ if(numberOfPuzzle == 1){
   endPuzzleOne.addEventListener('click', function(){
     textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
     numberOfPuzzle = 2;
-    puzzle1 = true;
     console.log(numberOfPuzzle);
     puzzleOne.classList.toggle('hide');
   })
-} 
-if (numberOfPuzzle == 2){
+} if (numberOfPuzzle == 2){
   console.log('We zijn bij puzzle 2');
   boneOne.addEventListener('click', function(){
     textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
@@ -153,9 +143,9 @@ if (numberOfPuzzle == 2){
     })
   })
   codeCase.addEventListener('click', function(){
-      if(keyReceived == true){
+      if (keyReceived == true){
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-legedoos\.png'></img>";
-      }else {
+      } else {
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-codeslot.png'></img>";
         textbox.addEventListener('click', function(){
           textbox.innerHTML = " ";
@@ -163,7 +153,7 @@ if (numberOfPuzzle == 2){
           inputCodeOne.classList.remove('hide');
           inputButtonOne.addEventListener('click', function(){
             const codeAnswer = inputCodeOne.value;
-            if(codeAnswer == 2137){
+            if (codeAnswer == 2137){
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
               inputCodeOne.classList.add('hide');
               inputButtonOne.classList.add('hide');
@@ -172,15 +162,13 @@ if (numberOfPuzzle == 2){
                 inputButtonOne.classList.add('hide');
                 inputCodeOne.classList.add('hide');
                 keyReceived = true;
-                
               })
-            }else {
+            } else {
               alert("Code is onjuist!");
             }
           })
         })
       }
-      
   })
   safe.addEventListener('click', function(){
     if(keyReceived == true){
@@ -223,8 +211,8 @@ if (numberOfPuzzle == 2){
       })
     }
   })
-} else if(numberOfPuzzle == 3){
-  lock.addEventListener('click', function(){
+} else if (numberOfPuzzle == 3){
+  lock.addEventListener('click', function() {
     textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel3-codeslot.png'></img>";
     textbox.addEventListener('click', function(){
       textbox.innerHTML = " ";
@@ -234,20 +222,20 @@ if (numberOfPuzzle == 2){
       inputButtonThree.classList.toggle('hide');
       inputButtonThree.addEventListener('click', function(){
         const lastCodeGuess = inputCodeThree.value;
-        if(lastCodeGuess == lastCodeAnswer){
+        if (lastCodeGuess == lastCodeAnswer) {
           strangeCode.innerHTML = " ";
           doorOpen = true;
           lock.addEventListener('click', function(){
 
           })
-          if(doorOpen == false){
+          if (doorOpen == false){
             exit.addEventListener('click', function(){
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
               textbox.addEventListener('click', function(){
                 textbox.innerHTML = " ";
               })
             })
-          }else{
+          } else{
             textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel3-geslaagd.png'></img>";
           strangeCode.classList.add('hide');
 
@@ -266,14 +254,11 @@ if (numberOfPuzzle == 2){
     })
   })
 }
-
-
 function swapTiles(cell1,cell2) {
     var temp = document.getElementById(cell1).className;
     document.getElementById(cell1).className = document.getElementById(cell2).className;
     document.getElementById(cell2).className = temp;
   }
-  
   function shuffle() {
   //Use nested loops to access each cell of the 3x3 grid
   for (var row=1;row<=3;row++) { //For each row of the 3x3 grid
@@ -286,7 +271,6 @@ function swapTiles(cell1,cell2) {
     } 
   } 
   }
-  
   function clickTile(row,column) {
     var cell = document.getElementById("cell"+row+column);
     var tile = cell.className;
@@ -320,6 +304,4 @@ function swapTiles(cell1,cell2) {
            }
          } 
     }
-    
   }
-  
