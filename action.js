@@ -1,4 +1,4 @@
-let numberOfPuzzle = 2;
+let numberOfPuzzle = 1;
 const language = document.querySelector('.language');
 const nolanguage = document.querySelector('.no-language');
 const puzzle = document.querySelector('.puzzle');
@@ -50,216 +50,226 @@ function updateCountdown() {
       countdownEl.classList.add('hide');
     }   */
 }
-
-if(numberOfPuzzle == 1){
-  /*showScroll.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
-  showScroll.addEventListener('click', function(){
-    showScroll.innerHTML = " ";
-  })*/
-  language.addEventListener('click', function(){
-    textbox.innerHTML = " ";
-      })
-  exit.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
-    textbox.addEventListener('click', function(){
+gameOne();
+function gameOne () {
+  if (numberOfPuzzle == 1){
+    /*showScroll.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
+    showScroll.addEventListener('click', function(){
+      showScroll.innerHTML = " ";
+    })*/
+    language.addEventListener('click', function(){
       textbox.innerHTML = " ";
-    })
-  })
-  codeCase.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel 1 codeslot.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-    })
-  })
-  lock.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-code-deur.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-    })
-  })
-  safe.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel 1 kluis.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-    })
-  })
-  boneOne.addEventListener('click', function(){
-    if(bonesCollected == 1 && boneOneCollect == false){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
-      bonesCollected++;
-
-    }else if(boneOneCollect == false){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
-      bonesCollected++;
-    }
-    
-    boneOneCollect = true;
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-    })
-  })
-  boneTwo.addEventListener('click', function(){
-    if(bonesCollected == 1 && boneTwoCollect == false){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
-      bonesCollected++;
-    }else if(boneTwoCollect == false){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
-      bonesCollected++;
-    }
-    boneTwoCollect = true;
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-    })
-  })
-  skeleton.addEventListener('click', function(){
-    if (bonesCollected <2){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-geenbot.png'></img>";
+        })
+    exit.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
       textbox.addEventListener('click', function(){
         textbox.innerHTML = " ";
       })
-    } else {
-      shuffle();
-      puzzleOne.classList.toggle('hide');
-    }
-  })
-  endPuzzleOne.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
-    numberOfPuzzle = 2;
-    puzzleOne.classList.toggle('hide');
-  })
-}else if(numberOfPuzzle == 2){
-  boneOne.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
     })
-  })
-  boneTwo.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
+    codeCase.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel 1 codeslot.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
     })
-  })
-  skeleton.addEventListener('click', function(){
-    textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
+    lock.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-code-deur.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
     })
-  })
-  codeCase.addEventListener('click', function(){
-      if(keyReceived == true){
-        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-legedoos\.png'></img>";
-      }else {
-        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-codeslot.png'></img>";
-        textbox.addEventListener('click', function(){
-          textbox.innerHTML = " ";
-          inputButtonOne.classList.remove('hide');
-          inputCodeOne.classList.remove('hide');
-          inputButtonOne.addEventListener('click', function(){
-            const codeAnswer = inputCodeOne.value;
-            if(codeAnswer == 2137){
-              textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
-              inputCodeOne.classList.add('hide');
-              inputButtonOne.classList.add('hide');
-              textbox.addEventListener('click', function(){
-                textbox.innerHTML = " ";
-                inputButtonOne.classList.add('hide');
-                inputCodeOne.classList.add('hide');
-                keyReceived = true;
-                
-              })
-            }else {
-              alert("Code is onjuist!");
-            }
-          })
-        })
+    safe.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel 1 kluis.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    boneOne.addEventListener('click', function(){
+      if (bonesCollected == 1 && boneOneCollect == false){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
+        bonesCollected++;
+  
+      } else if(boneOneCollect == false){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
+        bonesCollected++;
       }
       
-  })
-  safe.addEventListener('click', function(){
-    if(keyReceived == true){
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-openkluis\.png'></img>";
-      textbox.addEventListener('click', function(){
-        textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel2-decoding.png'></img>";
-        textbox.addEventListener('click', function(){
-          textbox.innerHTML = " ";
-          strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
-        strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png' style='position:absolute; left:70%; width:15%; top:20%;'>";
-        box.classList.toggle('hide');
-        submitTranslation.classList.toggle('hide');
-        submitTranslation.addEventListener('click', function(){
-          const actualTranslation = "halloween feest uitnodiging";
-          const personTranslation = box.value;
-          if(personTranslation.toLowerCase() == actualTranslation){
-            box.classList.add('hide');
-            submitTranslation.innerHTML = " ";
-            strangeCode.classList.add('hide');
-            
-            textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
-            numberOfPuzzle = 3;
-          }else {
-            alert("De tekst is onjuist!");
-          }
-        })
-
-        strangeCode.addEventListener('click', function(){
-          strangeCode.innerHTML = " ";
-
-        
-        })
-        })
-      })
-    } else {
-      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-geensleutel-kluis\.png'></img>";
+      boneOneCollect = true;
       textbox.addEventListener('click', function(){
         textbox.innerHTML = " ";
-
-      })
-    }
-  })
-} else if(numberOfPuzzle == 3){
-  lock.addEventListener('click', function(){
-    textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel3-codeslot.png'></img>";
-    textbox.addEventListener('click', function(){
-      textbox.innerHTML = " ";
-      strangeCode.innerHTML = "<img class='codeslot' src='img/codeslot-plus-raadsel.png'></img>";
-      const lastCodeAnswer = 74658
-      inputCodeThree.classList.toggle('hide');
-      inputButtonThree.classList.toggle('hide');
-      inputButtonThree.addEventListener('click', function(){
-        const lastCodeGuess = inputCodeThree.value;
-        if(lastCodeGuess == lastCodeAnswer){
-          strangeCode.innerHTML = " ";
-          doorOpen = true;
-          lock.addEventListener('click', function(){
-
-          })
-          if(doorOpen == false){
-            exit.addEventListener('click', function(){
-              textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
-              textbox.addEventListener('click', function(){
-                textbox.innerHTML = " ";
-              })
-            })
-          }else{
-            textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel3-geslaagd.png'></img>";
-          strangeCode.classList.add('hide');
-
-          exit.addEventListener('click', function(){
-            body.classList.toggle('body-end');
-            showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>"
-            showScroll.addEventListener('click', function(){
-              showScroll.innerHTML = " ";
-            })
-          })
-          }
-        } else {
-          alert('Code is onjuist!');
-        }
       })
     })
-  })
+    boneTwo.addEventListener('click', function(){
+      if (bonesCollected == 1 && boneTwoCollect == false){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot2.png'></img>";
+        bonesCollected++;
+      } else if(boneTwoCollect == false){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-bot1.png'></img>";
+        bonesCollected++;
+      }
+      boneTwoCollect = true;
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    skeleton.addEventListener('click', function(){
+      if (bonesCollected <2){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-geenbot.png'></img>";
+        textbox.addEventListener('click', function(){
+          textbox.innerHTML = " ";
+        })
+      } else {
+        shuffle();
+        puzzleOne.classList.toggle('hide');
+      }
+    })
+    endPuzzleOne.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
+      numberOfPuzzle = 2;
+      gameTwo();
+      puzzleOne.classList.toggle('hide');
+    })
+  }
 }
+function gameTwo () {
+  if(numberOfPuzzle == 2){
+    boneOne.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    boneTwo.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    skeleton.addEventListener('click', function(){
+      textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-skelet.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+      })
+    })
+    codeCase.addEventListener('click', function(){
+        if (keyReceived == true){
+          textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-legedoos\.png'></img>";
+        } else {
+          textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-codeslot.png'></img>";
+          textbox.addEventListener('click', function(){
+            textbox.innerHTML = " ";
+            inputButtonOne.classList.remove('hide');
+            inputCodeOne.classList.remove('hide');
+            inputButtonOne.addEventListener('click', function(){
+              const codeAnswer = inputCodeOne.value;
+              if (codeAnswer == 2137){
+                textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-opendoos\.png'></img>";
+                inputCodeOne.classList.add('hide');
+                inputButtonOne.classList.add('hide');
+                textbox.addEventListener('click', function(){
+                  textbox.innerHTML = " ";
+                  inputButtonOne.classList.add('hide');
+                  inputCodeOne.classList.add('hide');
+                  keyReceived = true;
+                  
+                })
+              } else {
+                alert("Code is onjuist!");
+              }
+            })
+          })
+        }
+        
+    })
+    safe.addEventListener('click', function(){
+      if (keyReceived == true){
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-openkluis\.png'></img>";
+        textbox.addEventListener('click', function(){
+          textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel2-decoding.png'></img>";
+          textbox.addEventListener('click', function(){
+            textbox.innerHTML = " ";
+            strangeCode.innerHTML = "<img class='puzzle-code' src='img/puzzle.png'>";
+          strangeCode.innerHTML += "<img class='puzzel-code' src='img/language.png' style='position:absolute; left:70%; width:15%; top:20%;'>";
+          box.classList.toggle('hide');
+          submitTranslation.classList.toggle('hide');
+          submitTranslation.addEventListener('click', function(){
+            const actualTranslation = "halloween feest uitnodiging";
+            const personTranslation = box.value;
+            if (personTranslation.toLowerCase() == actualTranslation){
+              box.classList.add('hide');
+              submitTranslation.innerHTML = " ";
+              strangeCode.classList.add('hide');
+              
+              textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
+              numberOfPuzzle = 3;
+              gameThree();
+            } else {
+              alert("De tekst is onjuist!");
+            }
+          })
+  
+          strangeCode.addEventListener('click', function(){
+            strangeCode.innerHTML = " ";
+  
+          
+          })
+          })
+        })
+      } else {
+        textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-geensleutel-kluis\.png'></img>";
+        textbox.addEventListener('click', function(){
+          textbox.innerHTML = " ";
+  
+        })
+      }
+    })
+  }
+} 
+function gameThree () {
+  if (numberOfPuzzle == 3){
+    lock.addEventListener('click', function(){
+      textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel3-codeslot.png'></img>";
+      textbox.addEventListener('click', function(){
+        textbox.innerHTML = " ";
+        strangeCode.innerHTML = "<img class='codeslot' src='img/codeslot-plus-raadsel.png'></img>";
+        const lastCodeAnswer = 74658
+        inputCodeThree.classList.toggle('hide');
+        inputButtonThree.classList.toggle('hide');
+        inputButtonThree.addEventListener('click', function(){
+          const lastCodeGuess = inputCodeThree.value;
+          if (lastCodeGuess == lastCodeAnswer){
+            strangeCode.innerHTML = " ";
+            doorOpen = true;
+            lock.addEventListener('click', function(){
+  
+            })
+            if (doorOpen == false){
+              exit.addEventListener('click', function(){
+                textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
+                textbox.addEventListener('click', function(){
+                  textbox.innerHTML = " ";
+                })
+              })
+            } else{
+              textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel3-geslaagd.png'></img>";
+            strangeCode.classList.add('hide');
+  
+            exit.addEventListener('click', function(){
+              body.classList.toggle('body-end');
+              showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>"
+              showScroll.addEventListener('click', function(){
+                showScroll.innerHTML = " ";
+              })
+            })
+            }
+          } else {
+            alert('Code is onjuist!');
+          }
+        })
+      })
+    })
+  }
+} 
 
 
 function swapTiles(cell1,cell2) {
